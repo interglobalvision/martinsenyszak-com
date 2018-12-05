@@ -27,22 +27,24 @@ get_template_part('partials/seo');
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
 <header id="header">
-  <div class="grid-row">
-    <div class="grid-item item-s-6">
-      <a href="<?php echo home_url(); ?>">
-        <div id="header-logotype">
-          <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/dist/img/martinsensyzak.svg'); ?>
-        </div>
-      </a>
-    </div>
-    <div class="grid-item item-s-6">
-      <ul>
-        <li><a href="<?php echo home_url('work'); ?>">Work</a></li>
-        <li><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
-        <li><a href="<?php echo home_url('about'); ?>">About</a></li>
-      </ul>
+  <div class="container">
+    <div class="grid-row">
+      <div class="grid-item item-s-6">
+        <a href="<?php echo home_url(); ?>">
+          <div id="header-logotype">
+            <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/dist/img/martinsensyzak.svg'); ?>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item item-s-6">
+        <ul class="grid-row justify-between">
+          <li class="grid-item no-gutter"><a href="<?php echo home_url('work'); ?>">Work</a></li>
+          <li class="grid-item no-gutter"><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
+          <li class="grid-item no-gutter"><a href="<?php echo home_url('about'); ?>">About</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
 
-<section id="main-container">
+<section id="main-container" class="margin-top-basic">
