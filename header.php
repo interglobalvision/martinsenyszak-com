@@ -26,8 +26,23 @@ get_template_part('partials/seo');
 <body <?php body_class(); ?>>
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-<section id="main-container">
+<header id="header">
+  <div class="grid-row">
+    <div class="grid-item item-s-6">
+      <a href="<?php echo home_url(); ?>">
+        <div id="header-logotype">
+          <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/dist/img/martinsensyzak.svg'); ?>
+        </div>
+      </a>
+    </div>
+    <div class="grid-item item-s-6">
+      <ul>
+        <li><a href="<?php echo home_url('work'); ?>">Work</a></li>
+        <li><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
+        <li><a href="<?php echo home_url('about'); ?>">About</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
 
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-  </header>
+<section id="main-container">
