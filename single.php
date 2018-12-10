@@ -20,7 +20,7 @@ if (have_posts()) {
       <section id="single-post-player" class="grid-row">
         <div class="grid-item item-s-12">
           <?php if ($vimeo) { ?>
-            <div data-vimeo-id="<?php echo $vimeo; ?>" id="single-post-vimeo" class="u-video-embed-container"></div>
+            <div data-vimeo-url="<?php echo $vimeo; ?>" id="single-post-vimeo" class="u-video-embed-container"></div>
           <?php } ?>
         </div>
       </section>

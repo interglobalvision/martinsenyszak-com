@@ -72,10 +72,10 @@ function igv_cmb_metaboxes() {
 	) );
 
 	$post_meta->add_field( array(
-		'name'       => esc_html__( 'Vimeo ID', 'cmb2' ),
-		'desc'       => esc_html__( '', 'cmb2' ),
+		'name'       => esc_html__( 'Vimeo URL', 'cmb2' ),
+		'desc'       => esc_html__( 'The direct url to the Vimeo.', 'cmb2' ),
 		'id'         => $prefix . 'vimeo',
-		'type'       => 'text',
+		'type'       => 'text_url',
 	) );
 
   $post_credits = $post_meta->add_field( array(
