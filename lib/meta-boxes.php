@@ -39,5 +39,69 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
    */
 
+   $post_meta = new_cmb2_box( array(
+		'id'            => $prefix . 'post_metabox',
+		'title'         => esc_html__( 'Post Metadata', 'cmb2' ),
+		'object_types'  => array( 'post' ),
+	) );
+
+	$post_meta->add_field( array(
+		'name'       => esc_html__( 'Video thumbnail (webm)', 'cmb2' ),
+		'desc'       => esc_html__( 'File for video thumbnail in .webm format', 'cmb2' ),
+		'id'         => $prefix . 'webm',
+		'type'       => 'file',
+	) );
+
+	$post_meta->add_field( array(
+		'name'       => esc_html__( 'Video thumbnail (mp4/mov)', 'cmb2' ),
+		'desc'       => esc_html__( 'File for video thumbnail in .mp4 format', 'cmb2' ),
+		'id'         => $prefix . 'mp4',
+		'type'       => 'file',
+	) );
+
+	$post_meta->add_field( array(
+		'name'             => esc_html__( 'Ratio', 'cmb2' ),
+		'id'               => $prefix . 'ratio',
+		'type'             => 'radio_inline',
+		'show_option_none' => 'No Selection',
+		'options'          => array(
+			'1-1' => esc_html__( '1:1', 'cmb2' ),
+			'4-3' => esc_html__( '4:3', 'cmb2' ),
+			'16-9' => esc_html__( '16:9', 'cmb2' ),
+		),
+	) );
+
+	$post_meta->add_field( array(
+		'name'       => esc_html__( 'Vimeo URL', 'cmb2' ),
+		'desc'       => esc_html__( 'The direct url to the Vimeo.', 'cmb2' ),
+		'id'         => $prefix . 'vimeo',
+		'type'       => 'text_url',
+	) );
+
+  $post_credits = $post_meta->add_field( array(
+  	'id'          => $prefix . 'credits',
+  	'type'        => 'group',
+  	'description' => __( 'Video credits', 'cmb2' ),
+  	'options'     => array(
+  		'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+  		'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+  		'remove_button' => __( 'Remove Entry', 'cmb2' ),
+  		'sortable'      => true,
+  	),
+  ) );
+
+  $post_meta->add_group_field( $post_credits, array(
+  	'name' => 'Role',
+  	'id'   => 'role',
+  	'type' => 'text',
+  ) );
+
+  $post_meta->add_group_field( $post_credits, array(
+  	'name' => 'Credit',
+  	'id'   => 'credit',
+  	'type' => 'text',
+  ) );
+
+
 }
 ?>

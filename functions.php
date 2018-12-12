@@ -19,6 +19,9 @@ function scripts_and_styles_method() {
   wp_localize_script('javascript-main', 'WP', $javascriptVars);
   wp_enqueue_script('javascript-main', $javascriptMain, '', '', true);
 
+  // Enqueue Vimeo player api library from source
+  wp_enqueue_script('vimeo-player', 'https://player.vimeo.com/api/player.js', null, null, true);
+
   // Enqueue style
   wp_enqueue_style( 'style-site', get_stylesheet_directory_uri() . '/dist/css/site.css' );
 
