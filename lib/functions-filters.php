@@ -1,6 +1,7 @@
 <?php
 
-// Custom filters (like pre_get_posts etc)
+// override gutenberg
+add_filter('use_block_editor_for_post', '__return_false');
 
 // Page Slug Body Class
 function add_slug_body_class( $classes ) {

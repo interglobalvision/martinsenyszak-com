@@ -102,6 +102,33 @@ function igv_cmb_metaboxes() {
   	'type' => 'text',
   ) );
 
+  // Showreel page meta
+
+  function igv_is_showreel_page( $cmb ) {
+    $showreel = get_page_by_path('showreel');
+
+    // the ID is an int but the object_id from cmb is a string!
+  	if ( $showreel->ID !== intval($cmb->object_id) ) {
+  		return false;
+  	}
+
+  	return true;
+  }
+
+  $showreel_meta = new_cmb2_box( array(
+		'id'           => $prefix . 'showreel_metabox',
+		'title'        => esc_html__( 'Showreel Page Metabox', 'cmb2' ),
+		'object_types' => array( 'page' ), // Post type
+		'show_on_cb'   => 'igv_is_showreel_page',
+	) );
+
+	$showreel_meta->add_field( array(
+		'name'       => esc_html__( 'Vimeo URL', 'cmb2' ),
+		'desc'       => esc_html__( 'The direct url to the Vimeo.', 'cmb2' ),
+		'id'         => $prefix . 'vimeo',
+		'type'       => 'text_url',
+	) );
+
 
 }
 ?>
