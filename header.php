@@ -27,8 +27,8 @@ get_template_part('partials/seo');
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
 <header id="header">
-  <div class="container">
-    <div class="grid-row">
+  <div class="container margin-top-small">
+    <div class="grid-row align-items-baseline">
       <div class="grid-item item-s-6">
         <a href="<?php echo home_url(); ?>">
           <div id="header-logotype">
@@ -36,15 +36,15 @@ get_template_part('partials/seo');
           </div>
         </a>
       </div>
-      <div class="grid-item item-s-6">
+      <nav id="menu" class="grid-item item-s-6">
         <ul class="grid-row justify-between">
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('work'); ?>">Work</a></li>
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('about'); ?>">About</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'work'); ?>><a href="<?php echo home_url(); ?>">Work</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'showreel'); ?>><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'about'); ?>><a href="<?php echo home_url('about'); ?>">About</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
 
-<section id="main-container" class="margin-top-basic">
+<section id="main-container" class="margin-top-mid">
