@@ -38,7 +38,7 @@ get_template_part('partials/seo');
       </div>
       <div class="grid-item item-s-6">
         <ul class="grid-row justify-between">
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('work'); ?>">Work</a></li>
+          <li class="grid-item no-gutter"><a href="<?php echo home_url(); ?>">Work</a></li>
           <li class="grid-item no-gutter"><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
           <li class="grid-item no-gutter"><a href="<?php echo home_url('about'); ?>">About</a></li>
         </ul>
