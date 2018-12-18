@@ -12,6 +12,9 @@ if (have_posts()) {
   $i = 1;
   while (have_posts()) {
     the_post();
+
+    $webm = get_post_meta($post->ID, '_igv_webm', true);
+    $mp4 = get_post_meta($post->ID, '_igv_mp4', true);
 ?>
 
         <article <?php
@@ -26,7 +29,18 @@ if (have_posts()) {
         ?> id="post-<?php the_ID(); ?>">
           <a href="<?php the_permalink() ?>">
             <div class="post-visual">
-              <?php the_post_thumbnail('gallery'); ?>
+              <?php
+                if ($webm && $mp4) {
+              ?>
+                <video muted autoplay loop>
+                  <source src="<?php echo $webm; ?>" type="video/webm">
+                  <source src="<?php echo $mp4; ?>" type="video/mp4">
+                </video>
+              <?php
+                } else {
+                  the_post_thumbnail('gallery');
+                }
+              ?>
             </div>
 
             <div class="post-text margin-top-tiny">
