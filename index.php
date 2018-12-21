@@ -8,6 +8,9 @@ get_header();
       <div class="grid-row">
 
 <?php
+
+$max_padding = 17;
+
 if (have_posts()) {
   $i = 1;
   while (have_posts()) {
@@ -25,6 +28,16 @@ if (have_posts()) {
             post_class($post_class);
           } else {
             post_class($post_class . ' item-m-6');
+          }
+
+          $padding_left = rand(0, $max_padding) . '%';
+          $padding_top = rand(0, ($max_padding / 2)) . '%';
+          $padding_right = rand(0, $max_padding) . '%';
+
+          if ($i === 1) {
+            echo 'style="padding-right: ' . $padding_right . ';"';
+          } else {
+            echo 'style="padding-left: ' . $padding_left . '; padding-top: ' . $padding_top . '; padding-right: ' . $padding_right . ';"';
           }
         ?> id="post-<?php the_ID(); ?>">
           <a href="<?php the_permalink() ?>">
