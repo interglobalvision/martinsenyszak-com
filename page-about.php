@@ -22,7 +22,7 @@ if (have_posts()) {
         if ($pullquote) {
       ?>
       <section id="about-page-pullquote" class="grid-row">
-        <div class="grid-item item-s-12 padding-top-large padding-bottom-large text-align-center pull-quote">
+        <div class="grid-item item-s-12 padding-top-large padding-bottom-large text-align-center font-size-large pull-quote">
           <?php echo $pullquote; ?>
         </div>
       </section>
