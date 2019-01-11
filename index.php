@@ -18,6 +18,16 @@ if (have_posts()) {
 
     $webm = get_post_meta($post->ID, '_igv_webm', true);
     $mp4 = get_post_meta($post->ID, '_igv_mp4', true);
+
+    $random_alignment = rand(1, 2);
+
+    if ($random_alignment === 1) {
+      $alignment_class = 'text-align-left';
+    } else if ($random_alignment === 2) {
+      $alignment_class = 'text-align-center';
+    } else {
+      $alignment_class = 'text-align-right';
+    }
 ?>
 
         <article <?php
@@ -41,7 +51,7 @@ if (have_posts()) {
           }
         ?> id="post-<?php the_ID(); ?>">
           <a href="<?php the_permalink() ?>">
-            <div class="post-visual">
+            <div class="post-visual <?php echo $alignment_class; ?>">
               <?php
                 if ($webm && $mp4) {
               ?>
