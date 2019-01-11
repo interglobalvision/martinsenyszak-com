@@ -19,6 +19,8 @@ if (have_posts()) {
     $webm = get_post_meta($post->ID, '_igv_webm', true);
     $mp4 = get_post_meta($post->ID, '_igv_mp4', true);
 
+    $ratio = get_post_meta($post->ID, '_igv_ratio', true);
+
     $random_alignment = rand(1, 2);
 
     if ($random_alignment === 1) {
@@ -51,7 +53,12 @@ if (have_posts()) {
           }
         ?> id="post-<?php the_ID(); ?>">
           <a href="<?php the_permalink() ?>">
-            <div class="post-visual <?php echo $alignment_class; ?>">
+            <div class="post-visual <?php
+              echo $alignment_class;
+              if (!empty($ratio)) {
+                echo ' ratio-' . $ratio;
+              }
+            ?>">
               <?php
                 if ($webm && $mp4) {
               ?>
