@@ -29,14 +29,14 @@ get_template_part('partials/seo');
 <header id="header">
   <div class="container margin-top-small">
     <div class="grid-row align-items-baseline">
-      <div class="grid-item item-s-6">
+      <div class="grid-item item-s-5">
         <a href="<?php echo home_url(); ?>">
           <div id="header-logotype">
             <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/dist/img/martinsensyzak.svg'); ?>
           </div>
         </a>
       </div>
-      <nav id="menu" class="grid-item item-s-6">
+      <nav id="menu" class="grid-item item-s-5 offset-s-2">
         <ul class="grid-row justify-between">
           <li <?php set_menu_active_classes('grid-item no-gutter', 'work'); ?>><a href="<?php echo home_url(); ?>">Work</a></li>
           <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'showreel'); ?>><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
