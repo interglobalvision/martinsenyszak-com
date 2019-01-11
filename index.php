@@ -56,7 +56,7 @@ if (have_posts()) {
               ?>
             </div>
 
-            <div class="post-text margin-top-tiny">
+            <div class="post-text margin-top-tiny font-color-black">
               <?php the_title(); ?>
             </div>
           </a>
