@@ -36,7 +36,7 @@ if (have_posts()) {
           if ($credits) {
             foreach ($credits as $credit) {
         ?>
-        <div class="grid-row">
+        <div class="grid-row margin-bottom-tiny">
           <div class="grid-item item-s-3 font-weight-normal">
             <?php echo $credit['role']; ?>
           </div>
