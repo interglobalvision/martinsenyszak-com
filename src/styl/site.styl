@@ -65,8 +65,8 @@ body
 b, strong, .font-bold
   font-weight: 600
 
-.font-light
-  font-weight: 300
+.font-weight-normal
+  font-weight: normal
 
 // ******************************************************
 
@@ -74,14 +74,20 @@ b, strong, .font-bold
 
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
+$color-gray = rgb(236, 234, 233)
+$color-text-gray = rgb(118, 117, 116)
 
 // ******************************************************
 
 // BASIC
 
 html
+  color: $color-text-gray
+  font-weight: 300
+  background-color: $color-gray
+
+.font-color-black
   color: $color-black
-  background-color: $color-white
 
 img
   height: auto

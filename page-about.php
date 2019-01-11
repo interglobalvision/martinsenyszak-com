@@ -31,10 +31,10 @@ if (have_posts()) {
       ?>
       <section id="about-page-text">
         <div class="grid-row margin-bottom-basic">
-          <div class="grid-item item-s-3">
+          <div class="grid-item item-s-3 font-weight-normal">
             About
           </div>
-          <div class="grid-item item-s-9">
+          <div class="grid-item item-s-9 font-color-black">
             <?php the_content(); ?>
           </div>
         </div>
@@ -43,10 +43,10 @@ if (have_posts()) {
           if ($selected) {
         ?>
         <div class="grid-row margin-bottom-basic">
-          <div class="grid-item item-s-3">
+          <div class="grid-item item-s-3 font-weight-normal">
             Selected clients & publications
           </div>
-          <div class="grid-item item-s-9">
+          <div class="grid-item item-s-9 font-color-black">
             <?php echo apply_filters('the_content', $selected); ?>
           </div>
         </div>
@@ -56,10 +56,10 @@ if (have_posts()) {
           if ($email) {
         ?>
         <div class="grid-row margin-bottom-basic">
-          <div class="grid-item item-s-3">
+          <div class="grid-item item-s-3 font-weight-normal">
             Contact
           </div>
-          <div class="grid-item item-s-9">
+          <div class="grid-item item-s-9 font-color-black">
             <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
           </div>
         </div>
@@ -69,10 +69,10 @@ if (have_posts()) {
           if ($links) {
         ?>
         <div class="grid-row margin-bottom-basic">
-          <div class="grid-item item-s-3">
+          <div class="grid-item item-s-3 font-weight-normal">
             Social
           </div>
-          <div class="grid-item item-s-9">
+          <div class="grid-item item-s-9 font-color-black">
             <ul>
               <?php
                 foreach($links as $link) {
