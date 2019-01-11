@@ -9,4 +9,6 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'opengraph', 1200, 630, true );
 
   add_image_size( 'gallery', 1264, 9999, false );
+  add_image_size( 'gallery-small', 632, 9999, false );
+  add_image_size( 'gallery-mid', 948, 9999, false );
 }
