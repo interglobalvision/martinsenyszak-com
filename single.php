@@ -37,10 +37,10 @@ if (have_posts()) {
             foreach ($credits as $credit) {
         ?>
         <div class="grid-row margin-bottom-tiny">
-          <div class="grid-item item-s-3 font-weight-normal">
+          <div class="grid-item item-s-3 item-m-3 offset-m-1 font-weight-normal">
             <?php echo $credit['role']; ?>
           </div>
-          <div class="grid-item item-s-9 font-color-black">
+          <div class="grid-item item-s-9 item-m-7 font-color-black">
             <?php echo $credit['credit']; ?>
           </div>
         </div>
@@ -51,7 +51,7 @@ if (have_posts()) {
       </section>
 
       <section id="single-post-gallery" class="grid-row">
-        <div class="grid-item item-s-12">
+        <div class="grid-item item-s-12 item-m-10 offset-m-1">
           <?php the_content(); ?>
         </div>
       </section>
