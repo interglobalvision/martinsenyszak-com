@@ -11,11 +11,17 @@ get_template_part('partials/globie');
 get_template_part('partials/seo');
 ?>
 
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-  <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon.png">
-  <link rel="shortcut" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon.ico">
-  <link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon-touch.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon.png">
 
 <?php if (is_singular() && pings_open(get_queried_object())) { ?>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
