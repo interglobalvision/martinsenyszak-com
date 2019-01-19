@@ -1,4 +1,4 @@
-  <footer id="footer" class="margin-top-basic margin-bottom-small text-align-center font-weight-normal">All content © Martin Senyszak <?php echo date('Y'); ?>, unless otherwise stated.</footer>
+  <footer id="footer" class="margin-top-basic margin-bottom-small text-align-center font-weight-normal font-size-small">© Martin Senyszak</footer>
 
 </section>
 
