@@ -14,6 +14,7 @@ if (have_posts()) {
     $pullquote = get_post_meta($post->ID, '_igv_pullquote', true);
     $selected = get_post_meta($post->ID, '_igv_selected', true);
     $email = get_post_meta($post->ID, '_igv_email', true);
+    $tel = get_post_meta($post->ID, '_igv_tel', true);
     $links = get_post_meta($post->ID, '_igv_links', true);
 ?>
 
@@ -61,6 +62,19 @@ if (have_posts()) {
           </div>
           <div class="grid-item item-s-9 item-m-7 font-color-black">
             <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+          </div>
+        </div>
+        <?php
+          }
+
+          if ($tel) {
+        ?>
+        <div class="grid-row margin-bottom-basic">
+          <div class="grid-item item-s-3 item-m-3 offset-m-1 font-weight-normal">
+            Call
+          </div>
+          <div class="grid-item item-s-9 item-m-7 font-color-black">
+            <a href="tel:<?php echo $tel; ?>"><?php echo $tel; ?></a>
           </div>
         </div>
         <?php

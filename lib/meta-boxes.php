@@ -143,6 +143,13 @@ function igv_cmb_metaboxes() {
 		'type'       => 'text_email',
 	) );
 
+	$showreel_meta->add_field( array(
+		'name'       => esc_html__( 'Telephone', 'cmb2' ),
+		'desc'       => esc_html__( 'with country code e.g. +44', 'cmb2' ),
+		'id'         => $prefix . 'tel',
+		'type'       => 'text',
+	) );
+
   $about_links = $showreel_meta->add_field( array(
   	'id'          => $prefix . 'links',
   	'type'        => 'group',
