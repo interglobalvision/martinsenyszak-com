@@ -102,6 +102,38 @@ function igv_cmb_metaboxes() {
   	'type' => 'text',
   ) );
 
+  // Private pages meta
+
+  $private_page_meta = new_cmb2_box( array(
+		'id'            => $prefix . 'private_page_metabox',
+		'title'         => esc_html__( 'Privage Page Metadata', 'cmb2' ),
+		'object_types'  => array( 'private' ),
+	) );
+
+  $private_page_embeds = $private_page_meta->add_field( array(
+  	'id'          => $prefix . 'private_embeds',
+  	'type'        => 'group',
+  	'description' => __( 'Video embeds', 'cmb2' ),
+  	'options'     => array(
+  		'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+  		'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+  		'remove_button' => __( 'Remove Entry', 'cmb2' ),
+  		'sortable'      => true,
+  	),
+  ) );
+
+  $private_page_meta->add_group_field( $private_page_embeds, array(
+  	'name' => 'Vimeo URL',
+  	'id'   => 'vimeo',
+  	'type' => 'text_url',
+  ) );
+
+  $private_page_meta->add_group_field( $private_page_embeds, array(
+  	'name' => 'Title',
+  	'id'   => 'title',
+  	'type' => 'text',
+  ) );
+
   // About page meta
 
   function igv_is_about_page( $cmb ) {
