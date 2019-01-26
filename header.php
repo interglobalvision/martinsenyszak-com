@@ -42,7 +42,7 @@ get_template_part('partials/seo');
           </div>
         </a>
       </div>
-      <nav id="menu" class="grid-item item-s-5 offset-s-2">
+      <nav id="menu" class="grid-item item-s-6 offset-s-1 item-m-5 offset-m-2">
         <ul class="grid-row justify-between">
           <li <?php set_menu_active_classes('grid-item no-gutter', 'work'); ?>><a href="<?php echo home_url(); ?>">Work</a></li>
           <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'showreel'); ?>><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
