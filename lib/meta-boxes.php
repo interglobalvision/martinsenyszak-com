@@ -137,52 +137,52 @@ function igv_cmb_metaboxes() {
   // About page meta
 
   function igv_is_about_page( $cmb ) {
-    $showreel = get_page_by_path('about');
+    $about = get_page_by_path('about');
 
     // the ID is an int but the object_id from cmb is a string!
-  	if ( $showreel->ID !== intval($cmb->object_id) ) {
+  	if ( $about->ID !== intval($cmb->object_id) ) {
   		return false;
   	}
 
   	return true;
   }
 
-  $showreel_meta = new_cmb2_box( array(
+  $about_meta = new_cmb2_box( array(
 		'id'           => $prefix . 'about_metabox',
 		'title'        => esc_html__( 'About Page Metabox', 'cmb2' ),
 		'object_types' => array( 'page' ), // Post type
 		'show_on_cb'   => 'igv_is_about_page',
 	) );
 
-	$showreel_meta->add_field( array(
+	$about_meta->add_field( array(
 		'name'       => esc_html__( 'Pull quote', 'cmb2' ),
 		'desc'       => esc_html__( 'The big quote', 'cmb2' ),
 		'id'         => $prefix . 'pullquote',
 		'type'       => 'textarea',
 	) );
 
-	$showreel_meta->add_field( array(
+	$about_meta->add_field( array(
 		'name'       => esc_html__( 'Selected clients & publications', 'cmb2' ),
 		'desc'       => esc_html__( '...', 'cmb2' ),
 		'id'         => $prefix . 'selected',
 		'type'       => 'textarea',
 	) );
 
-	$showreel_meta->add_field( array(
+	$about_meta->add_field( array(
 		'name'       => esc_html__( 'Email', 'cmb2' ),
 		'desc'       => esc_html__( '...', 'cmb2' ),
 		'id'         => $prefix . 'email',
 		'type'       => 'text_email',
 	) );
 
-	$showreel_meta->add_field( array(
+	$about_meta->add_field( array(
 		'name'       => esc_html__( 'Telephone', 'cmb2' ),
 		'desc'       => esc_html__( 'with country code e.g. +44', 'cmb2' ),
 		'id'         => $prefix . 'tel',
 		'type'       => 'text',
 	) );
 
-  $about_links = $showreel_meta->add_field( array(
+  $about_links = $about_meta->add_field( array(
   	'id'          => $prefix . 'links',
   	'type'        => 'group',
   	'description' => __( 'Links to social media etc', 'cmb2' ),
@@ -194,13 +194,13 @@ function igv_cmb_metaboxes() {
   	),
   ) );
 
-  $showreel_meta->add_group_field( $about_links, array(
+  $about_meta->add_group_field( $about_links, array(
   	'name' => 'Name',
   	'id'   => 'name',
   	'type' => 'text',
   ) );
 
-  $showreel_meta->add_group_field( $about_links, array(
+  $about_meta->add_group_field( $about_links, array(
   	'name' => 'Link',
   	'id'   => 'link',
   	'type' => 'text_url',
@@ -226,13 +226,30 @@ function igv_cmb_metaboxes() {
 		'show_on_cb'   => 'igv_is_showreel_page',
 	) );
 
-	$showreel_meta->add_field( array(
+  $showreels = $showreel_meta->add_field( array(
+  	'id'          => $prefix . 'showreels',
+  	'type'        => 'group',
+  	'description' => __( 'Showreels', 'cmb2' ),
+  	'options'     => array(
+  		'group_title'   => __( 'Showreel {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+  		'add_button'    => __( 'Add Another Showreel', 'cmb2' ),
+  		'remove_button' => __( 'Remove Showreel', 'cmb2' ),
+  		'sortable'      => true,
+  	),
+  ) );
+
+  $showreel_meta->add_group_field( $showreels, array(
+  	'name' => 'Title',
+  	'id'   => 'title',
+  	'type' => 'text',
+  ) );
+
+  $showreel_meta->add_group_field( $showreels, array(
 		'name'       => esc_html__( 'Vimeo URL', 'cmb2' ),
 		'desc'       => esc_html__( 'The direct url to the Vimeo.', 'cmb2' ),
-		'id'         => $prefix . 'vimeo',
+		'id'         => 'vimeo',
 		'type'       => 'text_url',
-	) );
-
+  ) );
 
 }
 ?>
