@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main id="main-content">
-  <section id="single-post">
+  <section id="page-showreel">
     <div class="container">
 
 <?php
@@ -16,7 +16,6 @@ if (have_posts()) {
 ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
       <section id="single-post-player" class="grid-row">
         <div class="grid-item item-s-12">
           <?php if ($vimeo) { ?>
@@ -31,27 +30,10 @@ if (have_posts()) {
             <h1><?php the_title(); ?></h1>
           </div>
         </div>
-
-        <?php
-          if ($credits) {
-            foreach ($credits as $credit) {
-        ?>
-        <div class="grid-row margin-bottom-tiny">
-          <div class="grid-item item-s-3 item-m-3 offset-m-1 font-weight-normal">
-            <?php echo $credit['role']; ?>
-          </div>
-          <div class="grid-item item-s-9 item-m-7 font-color-black">
-            <?php echo $credit['credit']; ?>
-          </div>
-        </div>
-        <?php
-            }
-          }
-        ?>
       </section>
 
-      <section id="single-post-gallery" class="grid-row">
-        <div class="grid-item item-s-12 item-m-10 offset-m-1">
+      <section class="grid-row">
+        <div class="grid-item item-s-12">
           <?php the_content(); ?>
         </div>
       </section>

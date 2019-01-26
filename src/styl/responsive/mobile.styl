@@ -11,7 +11,7 @@ $font-size-basic = 12px
 $font-size-extra = 48px
 $font-size-large = 36px
 $font-size-mid = 24px
-$font-size-small = 18px
+$font-size-small = 11px
 $font-size-tiny = 8px
 
 grid-maker(96%, $gutter, s)
@@ -19,6 +19,8 @@ grid-maker(96%, $gutter, s)
 space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
 font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny)
+
+// ******************************************************
 
 #header
   position: fixed
@@ -29,3 +31,33 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
 
 #header-logotype
   max-width: 250px
+  svg
+    margin-bottom: -5px;
+
+#menu
+  .active
+    font-weight: bold
+    color: $color-black
+
+// ******************************************************
+
+.ratio-1-1
+  video
+    max-height: 51vh
+
+.ratio-4-3
+  video
+    max-height: 66vh
+
+video
+  max-width: 100%
+  height: auto
+
+// ******************************************************
+
+.post-password-form
+  input
+    padding: 5px
+  input[type=submit]
+    border-radius: 3px
+    font-weight: 300

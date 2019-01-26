@@ -11,11 +11,17 @@ get_template_part('partials/globie');
 get_template_part('partials/seo');
 ?>
 
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="<?php bloginfo('stylesheet_directory'); ?>/dist/static/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-  <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon.png">
-  <link rel="shortcut" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon.ico">
-  <link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon-touch.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/dist/img/favicon.png">
 
 <?php if (is_singular() && pings_open(get_queried_object())) { ?>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -27,24 +33,24 @@ get_template_part('partials/seo');
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
 <header id="header">
-  <div class="container">
-    <div class="grid-row">
-      <div class="grid-item item-s-6">
+  <div class="container margin-top-small">
+    <div class="grid-row align-items-baseline">
+      <div class="grid-item item-s-5">
         <a href="<?php echo home_url(); ?>">
           <div id="header-logotype">
             <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/dist/img/martinsensyzak.svg'); ?>
           </div>
         </a>
       </div>
-      <div class="grid-item item-s-6">
+      <nav id="menu" class="grid-item item-s-5 offset-s-2">
         <ul class="grid-row justify-between">
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('work'); ?>">Work</a></li>
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
-          <li class="grid-item no-gutter"><a href="<?php echo home_url('about'); ?>">About</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'work'); ?>><a href="<?php echo home_url(); ?>">Work</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'showreel'); ?>><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'about'); ?>><a href="<?php echo home_url('about'); ?>">About</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
 
-<section id="main-container" class="margin-top-basic">
+<section id="main-container" class="margin-top-mid">

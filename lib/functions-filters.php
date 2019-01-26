@@ -1,6 +1,15 @@
 <?php
 
-// Custom filters (like pre_get_posts etc)
+// function to modify the main query object
+function my_modify_main_query( $query ) {
+  if ( $query->is_home() && $query->is_main_query() ) {
+    $query->query_vars['posts_per_page'] = -1;
+  }
+}
+add_action( 'pre_get_posts', 'my_modify_main_query' );
+
+// override gutenberg
+add_filter('use_block_editor_for_post', '__return_false');
 
 // Page Slug Body Class
 function add_slug_body_class( $classes ) {
