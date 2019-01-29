@@ -124,12 +124,6 @@ function igv_cmb_metaboxes() {
   ) );
 
   $private_page_meta->add_group_field( $private_page_embeds, array(
-  	'name' => 'Vimeo URL',
-  	'id'   => 'vimeo',
-  	'type' => 'text_url',
-  ) );
-
-  $private_page_meta->add_group_field( $private_page_embeds, array(
   	'name' => 'Embed URL',
   	'description' => __( 'The direct url to the Vimeo (e.g. https://vimeo.com/277640274) or the Youtube embed URL (e.g. https://www.youtube-nocookie.com/embed/oaYJbNkIrNk)', 'cmb2' ),
   	'id'   => 'embed',
