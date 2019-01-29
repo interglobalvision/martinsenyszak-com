@@ -72,9 +72,9 @@ function igv_cmb_metaboxes() {
 	) );
 
 	$post_meta->add_field( array(
-		'name'       => esc_html__( 'Vimeo URL', 'cmb2' ),
-		'desc'       => esc_html__( 'The direct url to the Vimeo.', 'cmb2' ),
-		'id'         => $prefix . 'vimeo',
+		'name'       => esc_html__( 'Vimeo URL or Youtube embed URL', 'cmb2' ),
+		'desc'       => esc_html__( 'The direct url to the Vimeo (e.g. https://vimeo.com/277640274) or the Youtube embed URL (e.g. https://www.youtube-nocookie.com/embed/oaYJbNkIrNk)', 'cmb2' ),
+		'id'         => $prefix . 'embeds',
 		'type'       => 'text_url',
 		'repeatable' => true
 	) );
