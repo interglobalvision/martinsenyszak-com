@@ -19,7 +19,7 @@ if (have_posts()) {
 
       <section id="single-post-player" class="grid-row">
         <?php
-          if (count($vimeo) > 0) {
+          if (isset($vimeo) && !empty($vimeo)) {
             foreach ($vimeo as $embed_url) {
         ?>
         <div class="grid-item item-s-12 margin-bottom-basic">
