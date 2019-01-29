@@ -27,7 +27,7 @@ if (have_posts()) {
             <div data-vimeo-url="<?php echo $embed_url; ?>" id="single-post-vimeo" class="u-video-embed-container"></div>
           <?php }  else if (strrpos($embed_url, 'youtube')) { ?>
             <div class="u-video-embed-container">
-              <iframe width="100%" src="https://www.youtube-nocookie.com/embed/oaYJbNkIrNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="100%" src="<?php echo $embed_url; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           <?php } ?>
         </div>
