@@ -45,7 +45,13 @@ if (have_posts()) {
         <div class="private-embed">
           <div class="grid-row margin-bottom-basic">
             <div class="grid-item item-s-12">
-              <div data-vimeo-url="<?php echo $embed['vimeo']; ?>" class="u-video-embed-container"></div>
+              <?php if (strrpos($embed['embed'], 'vimeo.com')) { ?>
+              <div data-vimeo-url="<?php echo $embed['embed']; ?>" class="u-video-embed-container"></div>
+            <?php }  else if (strrpos($embed['embed'], 'youtube')) { ?>
+              <div class="u-video-embed-container">
+                <iframe width="100%" src="<?php echo $embed['embed']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <?php } ?>
             </div>
           </div>
           <div class="grid-row margin-bottom-basic">
