@@ -18,14 +18,22 @@ if (have_posts()) {
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
       <section id="single-post-player" class="grid-row">
-        <div class="grid-item item-s-12">
-          <?php if ($vimeo) { ?>
-            <div data-vimeo-url="<?php echo $vimeo; ?>" id="single-post-vimeo" class="u-video-embed-container"></div>
+        <?php
+          if (count($vimeo) > 0) {
+            foreach ($vimeo as $embed_url) {
+        ?>
+        <div class="grid-item item-s-12 margin-bottom-basic">
+          <?php if ($embed_url) { ?>
+            <div data-vimeo-url="<?php echo $embed_url; ?>" id="single-post-vimeo" class="u-video-embed-container"></div>
           <?php } ?>
         </div>
+        <?php
+            }
+          }
+        ?>
       </section>
 
-      <section id="single-post-text" class="margin-top-basic margin-bottom-large">
+      <section id="single-post-text" class="margin-bottom-large">
         <div class="grid-row">
           <div class="grid-item item-s-9 offset-s-3 margin-bottom-basic">
             <h1><?php the_title(); ?></h1>

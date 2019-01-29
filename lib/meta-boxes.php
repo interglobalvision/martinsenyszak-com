@@ -76,6 +76,7 @@ function igv_cmb_metaboxes() {
 		'desc'       => esc_html__( 'The direct url to the Vimeo.', 'cmb2' ),
 		'id'         => $prefix . 'vimeo',
 		'type'       => 'text_url',
+		'repeatable' => true
 	) );
 
   $post_credits = $post_meta->add_field( array(
