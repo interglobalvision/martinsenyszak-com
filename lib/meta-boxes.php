@@ -139,7 +139,7 @@ function igv_cmb_metaboxes() {
   // About page meta
 
   function igv_is_about_page( $cmb ) {
-    $about = get_page_by_path('about');
+    $about = get_page_by_path('about-and-contact');
 
     // the ID is an int but the object_id from cmb is a string!
   	if ( $about->ID !== intval($cmb->object_id) ) {
