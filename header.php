@@ -44,7 +44,7 @@ get_template_part('partials/seo');
         <ul class="grid-row justify-between">
           <li <?php set_menu_active_classes('grid-item no-gutter', 'work'); ?>><a href="<?php echo home_url(); ?>">Work</a></li>
           <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'showreel'); ?>><a href="<?php echo home_url('showreel'); ?>">Showreel</a></li>
-          <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'about'); ?>><a href="<?php echo home_url('about'); ?>">About & Contact</a></li>
+          <li <?php set_menu_active_classes('grid-item no-gutter', 'page', 'about-and-contact'); ?>><a href="<?php echo home_url('about-and-contact'); ?>">About & Contact</a></li>
         </ul>
       </nav>
     </div>
