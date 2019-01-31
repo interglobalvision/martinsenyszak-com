@@ -54,11 +54,18 @@ if (have_posts()) {
             <?php } ?>
             </div>
           </div>
-          <div class="grid-row margin-bottom-basic">
+          <div class="grid-row margin-bottom-small">
             <div class="grid-item item-s-12 item-m-8 offset-m-2">
               <h2 class="font-size-mid"><?php echo $embed['title']; ?></h2>
             </div>
           </div>
+
+          <div class="grid-row margin-bottom-basic">
+            <div class="grid-item item-s-12">
+              <hr class="margin-top-small" />
+            </div>
+          </div>
+
         </div>
         <?php
             }
