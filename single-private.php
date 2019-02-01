@@ -26,7 +26,7 @@ if (have_posts()) {
 
       <section id="single-private-text" class="margin-top-basic margin-bottom-basic">
         <div class="grid-row">
-          <div class="grid-item item-s-9 offset-s-3 margin-bottom-basic">
+          <div class="grid-item item-s-10 offset-s-1 item-m-9 offset-m-3 margin-bottom-basic">
             <h1><?php the_title(); ?></h1>
           </div>
         </div>

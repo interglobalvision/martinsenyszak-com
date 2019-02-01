@@ -14,7 +14,7 @@ if (have_posts()) {
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
       <section id="single-post-text" class="margin-top-basic margin-bottom-large">
         <div class="grid-row">
-          <div class="grid-item item-s-9 offset-s-3 margin-bottom-basic">
+          <div class="grid-item item-s-10 offset-s-1 item-m-9 offset-m-3 margin-bottom-basic">
             <h1><?php the_title(); ?></h1>
           </div>
         </div>

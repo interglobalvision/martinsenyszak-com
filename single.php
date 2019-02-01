@@ -39,7 +39,7 @@ if (have_posts()) {
 
       <section id="single-post-text" class="margin-bottom-large">
         <div class="grid-row">
-          <div class="grid-item item-s-9 offset-s-3 margin-bottom-basic">
+          <div class="grid-item item-s-10 offset-s-1 item-m-9 offset-m-3 margin-bottom-basic">
             <h1><?php the_title(); ?></h1>
           </div>
         </div>
@@ -49,10 +49,10 @@ if (have_posts()) {
             foreach ($credits as $credit) {
         ?>
         <div class="grid-row margin-bottom-tiny">
-          <div class="grid-item item-s-3 item-m-3 offset-m-1 font-weight-normal">
+          <div class="grid-item item-s-4 item-m-3 offset-m-1 font-weight-normal">
             <?php echo $credit['role']; ?>
           </div>
-          <div class="grid-item item-s-9 item-m-7 font-color-black">
+          <div class="grid-item item-s-8 item-m-7 font-color-black">
             <?php echo $credit['credit']; ?>
           </div>
         </div>

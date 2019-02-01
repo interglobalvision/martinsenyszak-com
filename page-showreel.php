@@ -37,7 +37,7 @@ if (have_posts()) {
 
       <section id="single-post-text" class="margin-top-basic <?php if ($i !== $length) {echo 'margin-bottom-large';} ?>">
         <div class="grid-row">
-          <div class="grid-item item-s-9 offset-s-3 margin-bottom-basic">
+          <div class="grid-item item-s-10 offset-s-1 item-m-9 offset-m-3 margin-bottom-basic">
           <?php if ($showreel['title']) { ?>
             <h1><?php echo $showreel['title']; ?></h1>
           <?php } ?>
