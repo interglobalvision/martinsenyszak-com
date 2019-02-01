@@ -62,7 +62,7 @@ if (have_posts()) {
               <?php
                 if ($webm && $mp4) {
               ?>
-                <video muted autoplay loop>
+                <video muted autoplay loop poster="<?php echo the_post_thumbnail_url('gallery'); ?>">
                   <source src="<?php echo $webm; ?>" type="video/webm">
                   <source src="<?php echo $mp4; ?>" type="video/mp4">
                 </video>
