@@ -3,6 +3,7 @@
 
 // Import dependencies
 import lazySizes from 'lazysizes';
+import Cookies from 'js-cookie';
 
 // Import style
 import '../styl/site.styl';
@@ -24,6 +25,7 @@ class Site {
   onReady() {
     lazySizes.init();
 
+    this.checkGDPRApproval()
   }
 
   fixWidows() {
@@ -33,6 +35,19 @@ class Site {
       string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
       $(this).html(string);
     });
+  }
+
+  checkGDPRApproval() {
+    const approvalCookie = Cookies.get('gdpr-approval');
+
+    if (approvalCookie !== 'true') {
+      $('#gdpr').show();
+
+      $('#gdpr-accept').click(function() {
+        Cookies.set('gdpr-approval', true);
+        $('#gdpr').hide();
+      });
+    }
   }
 }
 
